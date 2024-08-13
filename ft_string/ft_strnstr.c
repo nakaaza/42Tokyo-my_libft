@@ -6,14 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 11:45:23 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/08 00:03:16 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:22:52 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	ft_strlen(const char *s);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+#include "./ft_string.h" 
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

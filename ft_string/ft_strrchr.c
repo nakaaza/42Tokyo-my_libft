@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 09:35:14 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/07 23:23:04 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:23:36 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "./ft_string.h" 
 
 char	*ft_strrchr(const char *s, int c)
 {

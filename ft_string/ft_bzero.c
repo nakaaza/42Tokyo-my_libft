@@ -6,13 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 20:59:16 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/06 13:03:05 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:13:19 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memset(void *b, int c, size_t len);
+#include "./ft_string.h"
 
 void	ft_bzero(void *s, size_t n)
 {

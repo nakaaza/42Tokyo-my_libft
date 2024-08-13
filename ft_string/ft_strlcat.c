@@ -6,14 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 17:28:10 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/21 17:48:42 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:20:06 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	ft_strlen(const char *s);
-void	*ft_memcpy(void *dst, const void *src, size_t len);
+#include "./ft_string.h" 
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

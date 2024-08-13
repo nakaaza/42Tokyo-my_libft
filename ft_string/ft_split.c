@@ -6,14 +6,12 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 22:23:36 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/21 21:58:36 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:17:42 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "./ft_string.h" 
 
-char			*ft_substr(char const *s, unsigned int start, size_t len);
-char			*ft_strchr(const char *s, int c);
 size_t static	count_arr_len(char const *s, char c);
 void static		free_arr(char **arr, int cnt);
 size_t static	append_arr(char **res, const char *s, char c, size_t n);

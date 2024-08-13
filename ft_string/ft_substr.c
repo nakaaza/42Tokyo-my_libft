@@ -6,13 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:09:16 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/21 18:47:31 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:25:03 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
+#include "./ft_string.h" 
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -6,13 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:59:38 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/08 22:32:38 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:18:43 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
+#include "./ft_string.h" 
 
 char	*ft_strdup(const char *s)
 {

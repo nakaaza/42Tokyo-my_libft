@@ -6,11 +6,12 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 15:44:10 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/13 18:50:22 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:01:48 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_putchar_fd(char c, int fd);
+#include "./ft_put_fd.h"
+
 int static	count_digit(int n);
 int	static	calc_power(int n, int e);
 

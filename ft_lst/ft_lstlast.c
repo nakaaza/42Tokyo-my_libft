@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 12:35:57 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/21 19:22:16 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 14:56:49 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./ft_lst.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

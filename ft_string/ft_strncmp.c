@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 09:43:06 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/04/28 16:37:35 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:22:02 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "./ft_string.h" 
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

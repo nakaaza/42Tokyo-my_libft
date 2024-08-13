@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_put_fd.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 13:26:16 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/08/13 14:56:00 by tnakaza          ###   ########.fr       */
+/*   Created: 2024/08/13 14:58:01 by tnakaza           #+#    #+#             */
+/*   Updated: 2024/08/13 15:02:05 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_lst.h"
+#ifndef FT_PUT_FD_H
+# define FT_PUT_FD_H
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
-{
-	t_list	*current;
-	t_list	*next;
+# include <unistd.h>
 
-	if (lst == NULL || del == NULL)
-		return ;
-	current = *lst;
-	while (current != NULL)
-	{
-		next = current -> next;
-		ft_lstdelone(current, del);
-		current = next;
-	}
-	*lst = NULL;
-	return ;
-}
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+
+#endif

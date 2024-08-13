@@ -6,13 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 19:18:57 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/21 19:13:21 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:21:39 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
+#include "./ft_string.h" 
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

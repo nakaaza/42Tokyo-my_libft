@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:23:34 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/06 11:49:29 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:21:12 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "./ft_string.h" 
 
 size_t	ft_strlen(const char *s)
 {

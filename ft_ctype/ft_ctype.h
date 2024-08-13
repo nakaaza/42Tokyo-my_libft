@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_ctype.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 13:26:16 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/08/13 14:56:00 by tnakaza          ###   ########.fr       */
+/*   Created: 2024/08/13 14:02:12 by tnakaza           #+#    #+#             */
+/*   Updated: 2024/08/13 14:21:44 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_lst.h"
+#ifndef FT_CTYPE_H
+# define FT_CTYPE_H
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
-{
-	t_list	*current;
-	t_list	*next;
+int	ft_isalnum(int c);
+int	ft_isalpha(int c);
+int	ft_isascii(int c);
+int	ft_isdigit(int c);
+int	ft_isprint(int c);
+int	ft_tolower(int c);
+int	ft_toupper(int c);
 
-	if (lst == NULL || del == NULL)
-		return ;
-	current = *lst;
-	while (current != NULL)
-	{
-		next = current -> next;
-		ft_lstdelone(current, del);
-		current = next;
-	}
-	*lst = NULL;
-	return ;
-}
+#endif

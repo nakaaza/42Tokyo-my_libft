@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lst.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 13:26:16 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/08/13 14:56:00 by tnakaza          ###   ########.fr       */
+/*   Created: 2024/08/13 14:48:05 by tnakaza           #+#    #+#             */
+/*   Updated: 2024/08/13 14:53:36 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_lst.h"
+#ifndef FT_LST_H
+# define FT_LST_H
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+# include <stdlib.h>
+
+typedef struct s_list
 {
-	t_list	*current;
-	t_list	*next;
+	void			*content;
+	struct s_list	*next;
+}				t_list;
 
-	if (lst == NULL || del == NULL)
-		return ;
-	current = *lst;
-	while (current != NULL)
-	{
-		next = current -> next;
-		ft_lstdelone(current, del);
-		current = next;
-	}
-	*lst = NULL;
-	return ;
-}
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+#endif

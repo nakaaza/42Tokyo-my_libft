@@ -6,15 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 20:06:57 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/21 22:27:12 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:24:28 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char	*ft_strchr(const char *s, int c);
-size_t	ft_strlen(const char *s);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
+#include "./ft_string.h" 
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

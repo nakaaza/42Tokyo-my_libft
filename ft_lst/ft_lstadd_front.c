@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 23:05:27 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/16 23:22:17 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 14:55:40 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./ft_lst.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

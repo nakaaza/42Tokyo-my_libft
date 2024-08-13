@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 11:35:46 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/21 18:35:27 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:15:15 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "./ft_string.h" 
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
