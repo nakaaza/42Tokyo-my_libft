@@ -6,11 +6,12 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:23:05 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/22 19:53:46 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:32:13 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isdigit(int c);
+#include "./ft_stdlib.h"
+
 int static	ft_isspace(char c);
 
 int	ft_atoi(const char *str)

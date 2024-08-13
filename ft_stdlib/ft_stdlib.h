@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_stdlib.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 13:09:10 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/08/13 15:35:06 by tnakaza          ###   ########.fr       */
+/*   Created: 2024/08/13 15:29:14 by tnakaza           #+#    #+#             */
+/*   Updated: 2024/08/13 15:37:49 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_stdlib.h"
+#ifndef FT_STDLIB_H
+# define FT_STDLIB_H
 
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*res;
+#include <stdint.h>
+#include <stdlib.h>
+#include "../ft_ctype/ft_ctype.h"
+#include "../ft_string/ft_string.h"
 
-	if (size != 0 && SIZE_MAX / size < count)
-		return (NULL);
-	res = malloc(count * size);
-	if (res == NULL)
-		return (NULL);
-	ft_bzero(res, count * size);
-	return (res);
-}
+int		ft_atoi(const char *str);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_itoa(int n);
+
+#endif

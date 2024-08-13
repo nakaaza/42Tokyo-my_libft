@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 19:50:26 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/05/05 18:58:07 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:37:42 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "./ft_stdlib.h" 
 
 int static	count_digit(int n);
 
