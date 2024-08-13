@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_print_chars.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/24 19:37:45 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/08/13 15:59:24 by tnakaza          ###   ########.fr       */
+/*   Created: 2024/06/06 19:42:37 by tnakaza           #+#    #+#             */
+/*   Updated: 2024/08/13 15:53:41 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_stdio.h"
+#include "./ft_printf_internal.h"
 
-int	ft_printf(const char *str, ...)
+size_t	print_char(char c)
 {
-	int			cnt;
-	va_list		args;
-	t_format	*format;
+	ft_putchar_fd(c, 1);
+	return (1);
+}
+
+size_t	print_formatted_str(t_format *format)
+{
+	size_t	cnt;
+	char	*formatted_str;
 
 	cnt = 0;
-	va_start(args, str);
-	while (*str != '\0')
-	{
-		if (*str == '%')
-		{
-			str++;
-			format = parse_format(str);
-			str += format -> chars_read;
-			cnt += print_format(format, args);
-			if (format -> str)
-				free(format -> str);
-			free(format);
-		}
-		else
-			cnt += print_char(*str++);
-	}
-	va_end(args);
+	if (!(format -> str))
+		return (cnt);
+	formatted_str = format -> str;
+	while (cnt < format -> len)
+		cnt += print_char(*formatted_str++);
 	return (cnt);
 }

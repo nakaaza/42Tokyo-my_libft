@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:11:25 by nakaaza           #+#    #+#             */
-/*   Updated: 2024/06/24 12:17:19 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:55:23 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "./ft_printf_internal.h"
 
 int static	count_pdigit(uintptr_t p);
 

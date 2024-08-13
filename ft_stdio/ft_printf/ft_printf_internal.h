@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_internal.h                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 19:38:05 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/06/24 12:14:19 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:53:57 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_PRINTF_INTERNAL_H
+# define FT_PRINTF_INTERNAL_H
 
-# include "../libft.h"
+# include "../../ft_stdlib/ft_stdlib.h"
+# include "../../ft_string/ft_string.h"
+# include "../../ft_ctype/ft_ctype.h"
+# include "../../ft_put_fd/ft_put_fd.h"
 # include <stdarg.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 typedef struct s_format
 {
@@ -28,9 +32,6 @@ typedef struct s_format
 	char			*str;
 	size_t			len;
 }				t_format;
-
-// ft_printf.c
-int			ft_printf(const char *str, ...);
 
 // ft_parse_format.c
 t_format	*parse_format(const char *str);

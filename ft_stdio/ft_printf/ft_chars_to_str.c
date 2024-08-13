@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:00:36 by nakaaza           #+#    #+#             */
-/*   Updated: 2024/06/24 12:16:45 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:49:15 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "./ft_printf_internal.h"
 
 void	char_to_str(char c, t_format *format)
 {

@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 14:54:41 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/06/22 08:20:03 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:54:43 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "./ft_printf_internal.h"
 
 size_t	print_format(t_format *format, va_list args)
 {

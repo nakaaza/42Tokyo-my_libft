@@ -6,11 +6,11 @@
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 17:34:13 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/06/22 08:21:35 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:52:34 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "./ft_printf_internal.h"
 
 size_t static	parse_flags(const char *str, t_format *format);
 size_t static	parse_field_width(const char *str, t_format *format);

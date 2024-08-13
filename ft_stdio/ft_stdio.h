@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_chars.c                                   :+:      :+:    :+:   */
+/*   ft_stdio.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 19:42:37 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/06/22 08:25:37 by tnakaza          ###   ########.fr       */
+/*   Created: 2024/05/24 19:38:05 by tnakaza           #+#    #+#             */
+/*   Updated: 2024/08/13 16:01:26 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#ifndef FT_STDIO_H
+# define FT_STDIO_H
 
-size_t	print_char(char c)
-{
-	ft_putchar_fd(c, 1);
-	return (1);
-}
+# include "./ft_printf/ft_printf_internal.h"
 
-size_t	print_formatted_str(t_format *format)
-{
-	size_t	cnt;
-	char	*formatted_str;
+// ft_printf.c
+int			ft_printf(const char *str, ...);
 
-	cnt = 0;
-	if (!(format -> str))
-		return (cnt);
-	formatted_str = format -> str;
-	while (cnt < format -> len)
-		cnt += print_char(*formatted_str++);
-	return (cnt);
-}
+#endif

@@ -1,48 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_flags.c                                   :+:      :+:    :+:   */
+/*   ft_set_flags.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnakaza <tnakaza@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 19:28:42 by tnakaza           #+#    #+#             */
-/*   Updated: 2024/06/10 00:06:50 by tnakaza          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:55:52 by tnakaza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "./ft_printf_internal.h"
 
-int	check_hash_flag(t_format *format)
+void	set_hash_flag(t_format *format, int val)
 {
-	if (format -> flags & (1 << 4))
-		return (1);
-	return (0);
+	format -> flags &= ~(!val << 4);
+	return ;
 }
 
-int	check_minus_flag(t_format *format)
+void	set_minus_flag(t_format *format, int val)
 {
-	if (format -> flags & (1 << 3))
-		return (1);
-	return (0);
+	format -> flags &= ~(!val << 3);
+	return ;
 }
 
-int	check_plus_flag(t_format *format)
+void	set_plus_flag(t_format *format, int val)
 {
-	if (format -> flags & (1 << 2))
-		return (1);
-	return (0);
+	format -> flags &= ~(!val << 2);
+	return ;
 }
 
-int	check_space_flag(t_format *format)
+void	set_space_flag(t_format *format, int val)
 {
-	if (format -> flags & (1 << 1))
-		return (1);
-	return (0);
+	format -> flags &= ~(!val << 1);
+	return ;
 }
 
-int	check_zero_flag(t_format *format)
+void	set_zero_flag(t_format *format, int val)
 {
-	if (format -> flags & (1 << 0))
-		return (1);
-	return (0);
+	format -> flags &= ~(!val << 0);
+	return ;
 }
