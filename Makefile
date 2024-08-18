@@ -38,9 +38,14 @@ $(NAME): objs
 	@echo "\n$(GREEN)Compiling $(NAME) ...$(DEF_COLOR)"
 	ar -rc $(NAME) $(OBJS)
 
+define compile_src
+	@make $(patsubst %.c,$(OBJ_DIR)/%.o,$(notdir $(1))) SRC=$(1)
+
+endef
+
 objs:
-	@echo "\n$(GREEN)Compiling src files...$(DEF_COLOR)"
-	$(foreach src, $(ALL_SRCS), $(shell $(MAKE) $(patsubst %.c, ./$(OBJ_DIR)/%.o,$(notdir $(src))) SRC=$(src);))
+	@echo "\n$(GREEN)Compiling src files ...$(DEF_COLOR)"
+	$(foreach src,$(ALL_SRCS),$(call compile_src,$(src)))
 	@touch objs
 
 $(OBJ_DIR)/%.o: 
@@ -48,7 +53,7 @@ $(OBJ_DIR)/%.o:
 	@$(CC) $(CFLAGS) -c $(SRC) -o $@
 
 clean:
-	@echo "\n$(YELLOW)Cleaning object files...$(DEF_COLOR)"
+	@echo "\n$(YELLOW)Cleaning object files ...$(DEF_COLOR)"
 	$(RM) -r $(OBJ_DIR)
 	$(RM) objs
 
@@ -60,12 +65,12 @@ re: fclean all
 
  
 # Colors
-DEF_COLOR	= \033[0;39m
-GRAY		= \033[0;90m
-RED			= \033[0;91m
-GREEN		= \033[0;92m
-YELLOW		= \033[0;93m
-BLUE		= \033[0;94m
-MAGENTA		= \033[0;95m
-CYAN		= \033[0;96m
-WHITE		= \033[0;97m
+DEF_COLOR	= \033[39m
+GRAY		= \033[30m
+RED			= \033[31m
+GREEN		= \033[32m
+YELLOW		= \033[33m
+BLUE		= \033[34m
+MAGENTA		= \033[35m
+CYAN		= \033[36m
+WHITE		= \033[37m
