@@ -30,24 +30,42 @@ OBJS	= $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(CTYPE) $(LST) $(PUT_FD) $(STDI
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
+RM		= rm -f
+
 all: $(NAME)
 
 $(NAME): objs
-	@echo $(OBJS)
+	@echo "\n$(GREEN)Compiling $(NAME) ...$(DEF_COLOR)"
 	ar -rc $(NAME) $(OBJS)
 
 objs:
-	@echo $(ALL_SRCS)
-	$(foreach src, $(ALL_SRCS), $(MAKE) $(patsubst %.c, ./$(OBJ_DIR)/%.o,$(notdir $(src))) SRC=$(src);)
+	@echo "\n$(GREEN)Compiling src files...$(DEF_COLOR)"
+	$(foreach src, $(ALL_SRCS), $(shell $(MAKE) $(patsubst %.c, ./$(OBJ_DIR)/%.o,$(notdir $(src))) SRC=$(src);))
+	@touch objs
 
 $(OBJ_DIR)/%.o: 
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) -c $(SRC) -o $@
+	@$(CC) $(CFLAGS) -c $(SRC) -o $@
 
 clean:
-	rm -rf $(OBJ_DIR)
+	@echo "\n$(YELLOW)Cleaning object files...$(DEF_COLOR)"
+	$(RM) -r $(OBJ_DIR)
+	$(RM) objs
 
 fclean: clean
-	rm -f $(NAME)
+	@echo "\n$(YELLOW)Cleaning $(NAME) ...$(DEF_COLOR)"
+	$(RM) $(NAME)
 
 re: fclean all
+
+ 
+# Colors
+DEF_COLOR	= \033[0;39m
+GRAY		= \033[0;90m
+RED			= \033[0;91m
+GREEN		= \033[0;92m
+YELLOW		= \033[0;93m
+BLUE		= \033[0;94m
+MAGENTA		= \033[0;95m
+CYAN		= \033[0;96m
+WHITE		= \033[0;97m
