@@ -14,6 +14,7 @@ STRING	= ft_bzero ft_memchr ft_memcmp ft_memcpy ft_memmove \
 			ft_memset ft_split ft_strchr ft_strdup ft_striteri \
 			ft_strjoin ft_strlcat ft_strlcpy ft_strlen ft_strmapi \
 			ft_strncmp ft_strnstr ft_strrchr ft_strtrim ft_substr
+GNL		= get_next_line
 
 CTYPE_SRC	= $(addprefix ft_ctype/, $(addsuffix .c, $(CTYPE)))
 LST_SRC		= $(addprefix ft_lst/, $(addsuffix .c, $(LST)))
@@ -22,10 +23,11 @@ STDIO_SRC	= $(addprefix ft_stdio/, $(addsuffix .c, $(STDIO))) \
 				$(addprefix ft_stdio/ft_printf/, $(addsuffix .c, $(STDIO/PRINTF)))
 STDLIB_SRC	= $(addprefix ft_stdlib/, $(addsuffix .c, $(STDLIB)))
 STRING_SRC	= $(addprefix ft_string/, $(addsuffix .c, $(STRING)))
-ALL_SRCS	= $(CTYPE_SRC) $(LST_SRC) $(PUT_FD_SRC) $(STDIO_SRC) $(STDLIB_SRC) $(STRING_SRC)
+GNL_SRC		= $(addprefix get_next_line/, $(addsuffix .c, $(GNL)))
+ALL_SRCS	= $(CTYPE_SRC) $(LST_SRC) $(PUT_FD_SRC) $(STDIO_SRC) $(STDLIB_SRC) $(STRING_SRC) $(GNL_SRC)
 
 OBJ_DIR	= obj
-OBJS	= $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(CTYPE) $(LST) $(PUT_FD) $(STDIO) $(STDIO/PRINTF) $(STDLIB) $(STRING)))
+OBJS	= $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(CTYPE) $(LST) $(PUT_FD) $(STDIO) $(STDIO/PRINTF) $(STDLIB) $(STRING) $(GNL)))
 
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
